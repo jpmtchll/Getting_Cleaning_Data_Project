@@ -1,0 +1,9 @@
+---
+title: "README"
+output: html_document
+---
+
+This repo contains a script named run_analysis.R, which acts to read in the X_test.txt, y_test.txt, subject_test.txt, X_train.txt, y_train.txt, and subject_train.txt files from the test and train folders respectively.  It then combines the two "X" files together, the "y" files together, and the "Subject" files together into three seperate data frames.  It then gives names to the columns of all three data frames, where the variable names in features.txt are used for the columns from the "X" file data, and the other columns are "Subject_ID" for the subject data, and "Activity_class" for the "y" file data, as well as renaming the activity class data with a descriptive identifier instead of integer value (provided by the file activity_labels.txt).  The code will next, subset the "X" data to include only data columns which deal with mean and standard deviation data.  Once this is done, all three data frames are merged into 1 new data frame.  
+
+The new data frame is then grouped by the Subject ID and the Activity class, and takes the mean of each of the mean and standard deviation data for each subject per activity class, creating a tidy data frame.  The tidy data frame is then written to the file: tidy_data.txt.
+

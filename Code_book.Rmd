@@ -1,0 +1,61 @@
+---
+title: "Code book"
+output: html_document
+---
+
+#The data
+The data in this data set represent the mean values of certain features measured by a participants' smart phones acceleromter and gyroscope given a certain activity in which they are participating in.
+
+##The raw data
+The raw data in this set came from the files: 
+* X_train.txt
+* y_train.txt
+* Subject_train.txt
+* X_test.txt
+* y_test.txt
+* Subject_test.txt
+from the train and test folders respectively.  The variable and activity class names were taken from:
+* fixtures.txt
+* activity_labels.txt
+respectively.
+
+###The tidy data
+The first part of the data set is the Subject_ID, an integer number used to distinguish between different participants.
+
+The second variable in the data set is the Activity_class.  This variable explains what the participant was doing at the time of record.  The activity class has six activities:
+
+* WALKING
+* WALKING_UPSTAIRS
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
+
+Next there are 79 variables which describe the mean and standard deviation of different features which have been measured using the accelerometer and gyroscope in the participants smart phone, each having 3-axial raw signals: tAcc-XYZ and tGyro-XYZ.  These features are denoted by the following variables:
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+each for a given X, Y, and Z, and the mean and standard deviations are denoted by:  
+
+* mean
+* std
+
+respectively.
+
+The data in the data set was taken by concatenating the X_train.txt, y_train.txt, Subject_train.txt with the X_test.txt, y_test.txt, and Subject_test.txt with one another respectively, from the train and test folders.  The above mean and std values for the above features were then chosen, and the mean of each was taken per participant, per activity, and then printed to the tidy_data.txt file.
